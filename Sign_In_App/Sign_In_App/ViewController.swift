@@ -10,7 +10,10 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     //this is an array for the users info
-    var users = [UserInfo]()
+    var users: [String: UserInfo] = [:]
+    
+    //this will be the true false statement for the signin and signup button so the submit button knows which is which
+    var signingIN = false
     
     //here i will have the outlets for the textFields
     
@@ -33,6 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
     }
     
 
@@ -48,6 +52,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             passwordReenter.isHidden = true
             firstName.isHidden = true
             lastName.isHidden = true
+            //this will change the is signing in to true
+            signingIN = true
+            
             break
         case 1:
             //this changes the buttons selected
@@ -58,6 +65,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
             firstName.isHidden = false
             lastName.isHidden = false
             
+            signingIN = false
+            
             
             break
         default:
@@ -66,7 +75,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    //this will be where i will have the compete sign in or sign up
     @IBAction func Submit(_ sender: UIButton) {
+        
+        //this will check and see if the user is signin in or signing up
+        if(signingIN){
+            
+            if let name = userName.text{
+                
+            }
+            
+        }else{
+            
+        }
+        
     }
 }
 
