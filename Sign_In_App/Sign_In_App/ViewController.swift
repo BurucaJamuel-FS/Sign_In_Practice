@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     //this is an array for the users info
     var users = [UserInfo]()
@@ -31,7 +31,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
     
 
 //this will be the action for the sign up and sign in feature
