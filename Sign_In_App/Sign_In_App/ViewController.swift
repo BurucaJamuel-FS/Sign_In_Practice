@@ -82,10 +82,39 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if(signingIN){
             
             if let name = userName.text{
-                
+                if (users[name] != nil){
+                    if let pass = password1.text{
+                        if(users[name]?.checkUserInfo(name: name, pass: pass) != nil){
+                            print("winner winner chicken diner")
+                        }
+                    }
+                }else{
+                    print("There is noone here")
+                    userName.text = ""
+                    password1.text = ""
+                }
             }
             
         }else{
+            //here is where i will create the user
+           
+            if let name = userName.text, let pass = password1.text, let passcheck = passwordReenter.text, let fName = firstName.text, let lName = lastName.text{
+                if (pass == passcheck){
+                    users[name] = UserInfo(username: name, password: pass, firstName: fName, lastName: lName)
+                }else{
+                    print("passwords dont match")
+                }
+                print("succses there is now \(users.count) users ")
+                
+                userName.text = ""
+                password1.text = ""
+                passwordReenter.text = ""
+                firstName.text = ""
+                lastName.text = ""
+                
+            }else{
+                print("please dont leave any field blank")
+            }
             
         }
         
