@@ -32,6 +32,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        password1.isSecureTextEntry = true
+        passwordReenter.isSecureTextEntry = true
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -85,10 +87,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if (users[name] != nil){
                     if let pass = password1.text{
                         if(users[name]?.checkUserInfo(name: name, pass: pass) != nil){
-                            print("winner winner chicken diner")
+                            //this checks the users for thier password and signs them in
+                            show(alertMessage(message: "Welcome Back \(name)"), sender: nil)
+                            userName.text = ""
+                            password1.text = ""
+                        }else{
+                            //this will the the user that they put in the wrong password
+                            show(alertMessage(message: "Wrong password"), sender: nil)
+                            password1.text = ""
                         }
                     }
                 }else{
+                    show(alertMessage(message: "There are no users by the username \(name) please create an account"), sender: nil)
                     print("There is noone here")
                     userName.text = ""
                     password1.text = ""
@@ -102,7 +112,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if (pass == passcheck){
                     users[name] = UserInfo(username: name, password: pass, firstName: fName, lastName: lName)
                 }else{
+                    show(alertMessage(message: "the passwords dont match please reenter passwords"), sender: nil)
+                    password1.text = ""
+                    passwordReenter.text = ""
                     print("passwords dont match")
+                    
                 }
                 print("succses there is now \(users.count) users ")
                 
@@ -112,11 +126,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 firstName.text = ""
                 lastName.text = ""
                 
+                //here i will give the user feedback on the fact that they created a user
+                show(alertMessage(message: "Welcom \(name) to the sign in app"), sender: nil)
+                
             }else{
                 print("please dont leave any field blank")
             }
             
         }
+        
+    }
+    
+    
+    func alertMessage (message: String) -> UIAlertController{
+        
+        //this will be a basic
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        let okay = UIAlertAction(title: "Okay", style: .default)
+        alert.addAction(okay)
+        
+        return alert
         
     }
 }
