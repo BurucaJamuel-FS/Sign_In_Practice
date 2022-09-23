@@ -32,9 +32,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        password1.isSecureTextEntry = true
-        passwordReenter.isSecureTextEntry = true
-        
+       
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
