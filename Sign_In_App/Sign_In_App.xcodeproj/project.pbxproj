@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1111F428E08F260085D857 /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1111F328E08F260085D857 /* SecoundViewController.swift */; };
 		1E81B28028DB967600F34F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E81B27F28DB967600F34F76 /* AppDelegate.swift */; };
 		1E81B28228DB967600F34F76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E81B28128DB967600F34F76 /* SceneDelegate.swift */; };
 		1E81B28428DB967600F34F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E81B28328DB967600F34F76 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E1111F328E08F260085D857 /* SecoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = "<group>"; };
 		1E81B27C28DB967600F34F76 /* Sign_In_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sign_In_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E81B27F28DB967600F34F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E81B28128DB967600F34F76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				1E81B28A28DB967700F34F76 /* LaunchScreen.storyboard */,
 				1E81B28D28DB967700F34F76 /* Info.plist */,
 				1EE9442D28DBA56700216981 /* User_Info.swift */,
+				1E1111F328E08F260085D857 /* SecoundViewController.swift */,
 			);
 			path = Sign_In_App;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				1EE9442E28DBA56700216981 /* User_Info.swift in Sources */,
 				1E81B28428DB967600F34F76 /* ViewController.swift in Sources */,
+				1E1111F428E08F260085D857 /* SecoundViewController.swift in Sources */,
 				1E81B28028DB967600F34F76 /* AppDelegate.swift in Sources */,
 				1E81B28228DB967600F34F76 /* SceneDelegate.swift in Sources */,
 			);

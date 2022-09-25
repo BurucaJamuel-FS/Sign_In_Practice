@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -144,11 +145,33 @@
                         <outlet property="signInOut" destination="a1v-aC-QDr" id="wFz-Xh-iql"/>
                         <outlet property="signUpOut" destination="uBP-Qg-rHN" id="TvY-Zd-kM9"/>
                         <outlet property="userName" destination="Rl3-nm-cxx" id="EPC-to-x0L"/>
+                        <segue destination="r0c-y1-5hC" kind="show" id="h7b-dF-Spu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="96.92307692307692" y="3.5545023696682461"/>
         </scene>
+        <!--Secound View Controller-->
+        <scene sceneID="1Rl-bA-pFr">
+            <objects>
+                <viewController id="r0c-y1-5hC" customClass="SecoundViewController" customModule="Sign_In_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GkV-tK-cLg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Whj-Ey-E44"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="amJ-ps-e7W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbU-CL-Xi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="4"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
