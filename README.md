@@ -9,3 +9,8 @@
 - now i will create a way for users to sign in and out of their account
 ---
 - i have added the abiility to create a user and added a way for the system to check the users password
+
+---
+## REASON FOR APP
+1. Here i am trying to make a sign in app. users are going to be able to sign in to the app and see their profile.
+
