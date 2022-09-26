@@ -8,6 +8,9 @@
 import UIKit
 
 class SecoundViewController: UIViewController {
+    
+    //this is going to be the passed on user
+    var signedInUser: UserInfo?
 
     override func viewDidLoad() {
         super.viewDidLoad()

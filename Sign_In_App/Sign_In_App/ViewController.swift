@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    //this will be the igned in user
+    var signedInUser: UserInfo?
+    
     //this is an array for the users info
     var users: [String: UserInfo] = [:]
     
@@ -39,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-
+ //MARK: signIn SIgn Up Codes
 //this will be the action for the sign up and sign in feature
     //i will use a tag to seprate the buttons
     @IBAction func SignINSignUp(_ sender: UIButton) {
@@ -74,7 +77,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
+    //MARK: Subbmit buttons
     //this will be where i will have the compete sign in or sign up
     @IBAction func Submit(_ sender: UIButton) {
         
@@ -134,6 +137,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    //MARK: navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SecoundViewController{
+            destination.signedInUser = signedInUser
+        }
+    }
+    
+    
+    //MARK: extra methods
     
     
     func alertMessage (message: String) -> UIAlertController{

@@ -159,8 +159,30 @@
                     <view key="view" contentMode="scaleToFill" id="GkV-tK-cLg">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8q-OW-AzD">
+                                <rect key="frame" x="0.0" y="77" width="390" height="55"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ids-us-ahv">
+                                <rect key="frame" x="154.66666666666666" y="132" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Whj-Ey-E44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Whj-Ey-E44" firstAttribute="trailing" secondItem="z8q-OW-AzD" secondAttribute="trailing" id="2Sb-Kp-rIQ"/>
+                            <constraint firstItem="ids-us-ahv" firstAttribute="top" secondItem="z8q-OW-AzD" secondAttribute="bottom" id="Qdm-2l-32Q"/>
+                            <constraint firstItem="z8q-OW-AzD" firstAttribute="leading" secondItem="Whj-Ey-E44" secondAttribute="leading" id="eIP-Uq-L2g"/>
+                            <constraint firstItem="ids-us-ahv" firstAttribute="centerX" secondItem="z8q-OW-AzD" secondAttribute="centerX" id="fO3-5W-6wF"/>
+                            <constraint firstItem="z8q-OW-AzD" firstAttribute="top" secondItem="Whj-Ey-E44" secondAttribute="top" constant="30" id="mJg-ec-6hP"/>
+                            <constraint firstItem="z8q-OW-AzD" firstAttribute="height" secondItem="GkV-tK-cLg" secondAttribute="height" multiplier="0.07" id="xVK-IK-MYW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="amJ-ps-e7W"/>
                 </viewController>
