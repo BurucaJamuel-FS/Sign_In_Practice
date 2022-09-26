@@ -145,7 +145,7 @@
                         <outlet property="signInOut" destination="a1v-aC-QDr" id="wFz-Xh-iql"/>
                         <outlet property="signUpOut" destination="uBP-Qg-rHN" id="TvY-Zd-kM9"/>
                         <outlet property="userName" destination="Rl3-nm-cxx" id="EPC-to-x0L"/>
-                        <segue destination="r0c-y1-5hC" kind="show" id="h7b-dF-Spu"/>
+                        <segue destination="r0c-y1-5hC" kind="show" identifier="firstID" id="h7b-dF-Spu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -185,6 +185,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="amJ-ps-e7W"/>
+                    <connections>
+                        <outlet property="fullNamelabel" destination="ids-us-ahv" id="toA-DO-Ht4"/>
+                        <outlet property="userNameLabel" destination="ids-us-ahv" id="P6s-X3-FiZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbU-CL-Xi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

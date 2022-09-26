@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //this will be the true false statement for the signin and signup button so the submit button knows which is which
     var signingIN = false
     
+    //this is the segueID
+    let segueID = "firstID"
+    
     //here i will have the outlets for the textFields
     
     @IBOutlet weak var userName: UITextField!
@@ -89,9 +92,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     if let pass = password1.text{
                         if(users[name]?.checkUserInfo(name: name, pass: pass) != nil){
                             //this checks the users for thier password and signs them in
-                            show(alertMessage(message: "Welcome Back \(name)"), sender: nil)
+//                            show(alertMessage(message: "Welcome Back \(name)"), sender: nil)
+                            signedInUser = users[name]
                             userName.text = ""
                             password1.text = ""
+                            performSegue(withIdentifier: segueID, sender: nil)
                         }else{
                             //this will the the user that they put in the wrong password
                             show(alertMessage(message: "Wrong password"), sender: nil)
@@ -127,6 +132,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 firstName.text = ""
                 lastName.text = ""
                 
+                
                 //here i will give the user feedback on the fact that they created a user
                 show(alertMessage(message: "Welcom \(name) to the sign in app"), sender: nil)
                 
@@ -141,6 +147,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SecoundViewController{
             destination.signedInUser = signedInUser
+        }
+    }
+    
+    //this will make sure there is a user to send
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if signedInUser == nil {
+            show(alertMessage(message: "Please sign in first"), sender: nil)
+            return true
+        }else{
+            return false
         }
     }
     

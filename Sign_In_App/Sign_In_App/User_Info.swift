@@ -36,4 +36,9 @@ class UserInfo{
         
     }
     
+    func getFullName () -> String{
+        
+        return "\(firstName) \(lastName)"
+    }
+    
 }
